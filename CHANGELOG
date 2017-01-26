@@ -1,0 +1,7 @@
+v1.1
+- combined translator and bytecode interpreter into one file
+- changed name
+- added bytecode-saving option
+- added bool data type
+- fixed the type-checking system (or lack thereof, fuck 2014 me for letting
+that shit slide)

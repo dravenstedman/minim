@@ -1,0 +1,34 @@
+MINIM
+-
+Designed and implemented by Draven Stedman
+
+This is a minimalistic programming language I'm designing as
+a fun little project to keep myself occupied when I'm not writing
+music. It's chiefly influenced by Pascal and other Wirth-designed
+languages, though it's starting to take inspiration from wherever
+I see fit.
+
+This repository holds reference implementations. The plural is due
+to the fact that I currently am thinking of attempting to reimplement
+the language into a compiled language such as C++ or Pascal, in addition
+to the small but in practice somewhat inefficient implementation that runs
+on Python. The primary reason for this is that I want to be able to make
+the Minim interpreter widespread and efficient. I'm kinda aiming for the
+perfect balance of pure, brutalistic minimalism, and usability/flexibility.
+
+You can read the specification, which is changing with every new addition to
+the language I add. You can also read the changelog just to be aware of what
+is changing with every new version, and in addition you can read the TODO doc
+to see what I plan on implementing.
+
+Minim and its' implementations are licenced under the Modified BSD Licence.
+See LICENCE for details.
+-
+
+Options:
+(due to current limitations you may only use one at a time, that will be fixed in v1.2.)
+
+-b / --save-bytecode	save the intermediate representation code (somewhat erroneously mislabeled as bytecode)
+-d / --debug		verbose debug mode for debugging the interpreter
+-h / --help		shows help message
+-v / --version		shows version

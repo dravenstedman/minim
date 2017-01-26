@@ -1,0 +1,8 @@
+v1.1
+- add basic file operations
+
+v1.2
+- add complex file operations
+- add array data type
+- fix command-line argument system
+- pretty-print debug stuff

@@ -1,0 +1,184 @@
+/****************************************
+*					*
+*		MINIM 1.1		*
+*	Specification by Draven S.	*
+*					*
+****************************************/
+
+TABLE OF CONTENTS:
+
+I. INTRODUCTION
+II. DATA TYPES and VARIABLE DECLARATION
+III. CONTROL FLOW
+IV. SUBROUTINES
+V. INPUT/OUTPUT
+VI. COMPILATION/INTERPRETATION
+VII. CREDITS
+
+=========================================
+
+I. INTRODUCTION
+
+Beanie is a strongly typed, interpreted procedural structured imperative
+programming language. Its main influences are Pascal, Lua, Python, Go, and
+ALGOL-W. Its sole designer is Draven Stedman, though it takes a lot of cues
+from the programming languages like those designed by Niklaus Wirth.
+
+=========================================
+
+II. DATA TYPES AND VARIABLE DECLARATION
+
+The data types in Beanie are as follows:
+
+int	-	Signed 32-bit integer
+float	-	Floating-point double-precision number
+str	-	A series of characters (a string)
+bool	-	A boolean value (either TRUE or FALSE)
+
+
+The way you declare a variable in Beanie is as follows:
+
+[type] [variable-name] = [value];
+
+For example:
+
+int foo = 21;
+str bar = "backflips";
+float baz = 37.0;
+
+=========================================
+
+III. CONTROL FLOW
+
+---------------------
+
+1. GOTO STATEMENTS
+
+GOTO statements allow for flexibility in control flow, such as simple looping, 
+conditional jumping, and the ability to skip over large portions of code. You
+can use a goto statement like this:
+
+goto [line number];
+
+For example:
+
+goto 3;
+
+That code makes the interpreter jump to line 3 and continue execution from there.
+
+---------------------
+
+2. IF STATEMENTS
+
+If statements (or more technically "conditional statements") allow for executing
+certain blocks of code based on whether an expression is true.
+
+If statements in Beanie work like this:
+
+if(expression) begin
+	// Do some stuff
+stopif;
+
+=========================================
+
+IV. SUBROUTINES
+
+Subroutines (aka functions, methods, procedures, etc.) are little blocks of code
+which are executed by calling their name as a "function call".
+
+Subroutines are declared as follows:
+
+fn [function name]([args]) begin
+	// Do some stuff
+stopf
+
+A function call is like this:
+
+functionName(args1,args2,etc);
+
+For example, here's a function which prints the phrase "What's nine plus ten"
+when called.
+
+fn twentyone(null) begin	// If you put the keyword null for arguments,
+				// your function will not use arguments.
+	puts("What's nine plus ten?");	// Twenty-one?
+stopf
+
+Subroutines are extremely useful as they prevent the writing of boilerplate/copy
+and paste code.
+
+=========================================
+
+V. INPUT/OUTPUT
+
+Any good language will need some basic command-line input/output.
+
+To print strings to the screen, we use the "puts" builtin function like so:
+
+puts("I have a PhD in Butt Stuff.");
+
+It also works with variables:
+
+puts(a_random_string);
+
+
+Meanwhile, to get input from the command line we use the "gets" builtin function.
+The gets function takes two arguments: the variable to put the input into and the
+prompt to use. Like this:
+
+gets(randomvar, ">>>");
+
+File operations are designed to be simple.
+To read a file's entire text into a variable, use fread as follows:
+
+fread(variable, filename);
+
+The variable will be created holding the value of the file's contents as a
+string. You don't need to declare the variable first.
+
+To write a file there are two different options; if you want to completely
+overwrite a file's contents, use fwrite. On the other hand, if you want to
+simply append text to a file, use fappend. Their usage cases are the exact
+same:
+
+fwrite("string", filename);
+fwrite(string_var, filename);
+fappend("string", filename);
+fappend(string_var, filename);
+
+=========================================
+
+VI. COMPILATION/INTERPRETATION
+
+When you run a Minim code file with the interpreter, the interpreter
+translates the raw code into an intermediate subset of the language
+called MIB, or Minim Interpreter Bytecode. There's a command-line option to
+save this bytecode as a separate file, either for optimization or for debug
+purposes. 
+=========================================
+
+VII. CREDITS
+
+Designed and Implemented by Draven Stedman
+
+This specification and the implementation of the language described are hereby
+licenced under the Modified BSD Licence.
+
+==========================================
+
+VIII. CHANGELOG
+
+v1.1:
+- combined translator and bytecode interpreter into one file
+- changed name
+- added bytecode-saving option
+- added bool data type
+- added basic file operations (write, read, append) [todo]
+
+==========================================
+
+IX. FEATURES THAT WILL BE ADDED IN FUTURE VERSIONS
+
+v1.2 will contain the following new features:
+- add array data structure
+- add complex file operations (reading lines into an array, etc)
