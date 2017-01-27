@@ -215,7 +215,18 @@ def Interpret(codeline):
 				pass
 		else:
 				pass
-	else:
+        elif codeline.startswith("file"):
+            # This means the code here is dealing with files obv
+            if codeline.startswith("filewrite"):
+                # File writing handler
+            elif codeline.startswith("fileread"):
+                # File reading handler
+            elif codeline.startswith("fileappend"):
+                # File append handler
+            else:
+                print "Error: either it's not a thing or it's not implemented, see todo/changelog."
+                sys.exit()
+        else:
 		pass
 
 def eval_expr(expression):
