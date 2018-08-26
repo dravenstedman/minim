@@ -19,7 +19,7 @@ VII. CREDITS
 
 I. INTRODUCTION
 
-Beanie is a strongly typed, interpreted procedural structured imperative
+Minim is a strongly typed, interpreted procedural structured imperative
 programming language. Its main influences are Pascal, Lua, Python, Go, and
 ALGOL-W. Its sole designer is Draven Stedman, though it takes a lot of cues
 from the programming languages like those designed by Niklaus Wirth.
@@ -28,7 +28,7 @@ from the programming languages like those designed by Niklaus Wirth.
 
 II. DATA TYPES AND VARIABLE DECLARATION
 
-The data types in Beanie are as follows:
+The data types in Minim are as follows:
 
 int	-	Signed 32-bit integer
 float	-	Floating-point double-precision number
@@ -36,7 +36,7 @@ str	-	A series of characters (a string)
 bool	-	A boolean value (either TRUE or FALSE)
 
 
-The way you declare a variable in Beanie is as follows:
+The way you declare a variable in Minim is as follows:
 
 [type] [variable-name] = [value];
 
@@ -73,7 +73,7 @@ That code makes the interpreter jump to line 3 and continue execution from there
 If statements (or more technically "conditional statements") allow for executing
 certain blocks of code based on whether an expression is true.
 
-If statements in Beanie work like this:
+If statements in Minim work like this:
 
 if(expression) begin
 	// Do some stuff
